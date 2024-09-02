@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - Creditcard
+name: Build and deploy Python app to Azure Web App - creditcard
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C265EDA628CA4EB3A8EF93004B59AF30 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_7DC10431861849A08D3B24C9D3781E8A }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_02BA8B415B9546BA922786B61C64D7DF }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_743D54FB987C49E2BF2B1F4DFEB9C873 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3747AF06581546269AC55BAEA62ABB03 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A8E42BE1EE05452DB1355AC32BF0DFC6 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'Creditcard'
+          app-name: 'creditcard'
           slot-name: 'Production'
           
